@@ -1,60 +1,54 @@
 package miPrincipal;
 
-public class Pila<T>{
-    //Apunta al tope de la pila
-    private  Nodo<T> cabeza;
-    //Almacena el total de elementos d ela pila
+public class Pila <T>{
+    //Atrivuto cabeza apunta al tope de la pila
+    private Nodo<T>cabeza;
+    //Almacena el total de elementos de la pila
     private int tamanio;
+    //Constructor por defecto
     public Pila(){
-        cabeza=null;
-        tamanio =0;
+        cabeza = null;
+        tamanio = 0;
     }
-
-    //get
-    public int getTamanio() { return this.tamanio;}
-    public int getValor() {return cabeza.getDato();}
-
-
-    //Veirfica si la pila esta vacia
+    //Métodos get
+    public int getTamanio(){
+        return tamanio;
+    }
+    //Métodos de isntancia
     public boolean esVacia(){
-        return cabeza==null;
-    }
-
+        return (cabeza == null);
+    }   
     public void apilar(T valor){
-        //Crea un nuevo nodo
-        Nodo<T> nuevoNodo = new Nodo<>(valor);
-        //fijar valor en el nodo
-        nuevo.setValor(5);
-        if (esVacia()) {
-            //Cabeza apunta al nuevo nodo
+        //Crear un nuevo nodo
+        Nodo<T> nuevo = new Nodo<T>();
+        //Fijar el valor dentro del nodo
+        nuevo.setValor(valor);
+        if(esVacia()){
+            //La cabeza apunta al nuevo nodo
             cabeza = nuevo;
-        } else {
-            //se enlaza el campo sigueite de nuevo con la cabeza
+        }else{
+            //Se enlaza el campo siguiente de nuevo con la cabeza
             nuevo.setSiguiente(cabeza);
-            //la nueva canbeza se la pila pasa ser neuevo
+            //La nueva cabeza de la pila pasa a ser nuevo
             cabeza = nuevo;
         }
-        //Invrementar el tamanio por que hay un nuevo elmento en la pila
+        //Incremetar el tamaño porque hay un nuevo elemento en la pila
         tamanio++;
-
     }
-
-    public void desapilar(){
-        if (!esVacia()) {
-            //la cabeza de la pila pasa a ser el siguiente nodo
+    //Eliminar un elemento de la pila
+    public void retirar(){
+        if(!esVacia()){
             cabeza = cabeza.getSiguiente();
             tamanio--;
         }
-        
-        
-    }   
-    //Devuelce el elemento almacenado en el tope de la cima
-    public T cima(){
-        if (!esVacia()) {
-            return cabeza.getValor();
-        }else
-        return null;
     }
-
+    //Devuelve el elemento almacenado en el tope de la cima
+    public T cima(){
+        if(!esVacia()){
+            return cabeza.getValor();
+        }else{
+            return null;
+        }
+    }
 
 }
