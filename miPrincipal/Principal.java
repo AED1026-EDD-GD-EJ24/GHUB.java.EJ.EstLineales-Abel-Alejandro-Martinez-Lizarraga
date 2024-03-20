@@ -1,20 +1,55 @@
 package miPrincipal;
 
-public class ClienteMain {
-    public static void main(String[] args){
-        //Crear una nueva pila de enteros
-        Pila<Integer> pila = new Pila<Integer>();
-        //apilar algunos datos enteros
-        pila.apilar(2);
-        pila.apilar(5);
-        pila.apilar(7);
-        System.out.println("El tope de la pila es "+pila.cima());
-        //se desapila
-        pila.retirar();
-        System.out.println("El tope de la pila es "+pila.cima());
-        //se desapila
-        pila.retirar();
-        System.out.println("El tope de la pila es "+pila.cima());
-      
+import java.util.Scanner;
+
+public class Principal {
+    public static void main(String[] args) {
+        Scanner consola = new Scanner(System.in);
+        int opc =0;
+        do{
+            System.out.println("*************************");
+            System.out.println("  Estructuras Lineales   ");
+            System.out.println("*************************");
+            System.out.println(" 1) Pila");
+            System.out.println(" 2) Stack");
+            System.out.println(" 3) Delimitadores");
+            System.out.println(" 4) Expresion Infija-Prefija");
+            System.out.println(" 5) Cola");
+            System.out.println(" 6) Queue");
+
+            System.out.println();
+
+            System.out.println("0) SALIR");
+            System.out.print("Selecciona opción:");
+            opc=consola.nextInt();
+            switch (opc){
+                case 1:
+                   DemoPila.menu();
+                   break;
+                case 2:
+                   DemoStack.menu();
+                   break;
+                case 3:
+                   DemoDelimitadores.menu();
+                   break;
+                case 4:
+                   //tarea
+                case 5:
+                   DemoCola.menu();
+                   break;
+                case 6:
+                   DemoQueue.menu();
+                   break;
+                case 0:
+                    System.out.println("ADIOS!");
+                    consola.close();
+                    break;
+                default:
+                    System.out.println("Valor incorrecto, intente de nuevo!");
+            }
+
+        } while (opc != 0);
+
     }
+    
 }
