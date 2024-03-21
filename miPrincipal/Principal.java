@@ -1,4 +1,4 @@
-package miPrincipal;
+
 
 import java.util.Scanner;
 
@@ -23,23 +23,27 @@ public class Principal {
             System.out.print("Selecciona opción:");
             opc=consola.nextInt();
             switch (opc){
-                case 1:
-                   DemoPila.menu();
-                   break;
-                case 2:
-                   DemoStack.menu();
-                   break;
-                case 3:
-                   DemoDelimitadores.menu();
-                   break;
-                case 4:
+               case 1:
+               DemoPila.menu();
+               break;
+               case 2:
+                  DemoStack.menu();
+                  break;
+               case 3:
+                  DemoDelimitadores.menu();
+                  break;
+               case 4:
                    //tarea
-                case 5:
-                   DemoCola.menu();
-                   break;
-                case 6:
-                   DemoQueue.menu();
-                   break;
+               case 5:
+                  DemoCola.menu();
+                  break;
+               case 6:
+                  DemoQueue.menu();
+                  break;
+
+               case 7:
+                  DemoTablaDispersion.menu();
+                  break;
                 case 0:
                     System.out.println("ADIOS!");
                     consola.close();

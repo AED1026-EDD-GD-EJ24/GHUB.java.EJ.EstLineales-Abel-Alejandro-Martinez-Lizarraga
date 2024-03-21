@@ -1,4 +1,4 @@
-package miPrincipal;
+
 /*
  * La API de java tra implementada la cola mediante la interface 
  * java.util.Queue, como es una interface se requiere instanciar 

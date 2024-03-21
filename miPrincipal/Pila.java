@@ -1,4 +1,4 @@
-package miPrincipal;
+
 public class Pila<T>{
     //Atributo cabeza apunta al tope de la pila
     private Nodo<T> cabeza;

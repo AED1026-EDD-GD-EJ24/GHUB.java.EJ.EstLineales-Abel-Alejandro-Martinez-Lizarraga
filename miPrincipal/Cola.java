@@ -1,4 +1,4 @@
-package miPrincipal;
+
 public class Cola<T>{
     //Atributo cabeza, que apunta al primer elemento de la cola
     private Nodo<T> cabeza;

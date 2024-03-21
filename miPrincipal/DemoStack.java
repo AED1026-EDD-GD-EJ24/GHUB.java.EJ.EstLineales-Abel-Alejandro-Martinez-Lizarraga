@@ -1,4 +1,4 @@
-package miPrincipal;
+
 import java.util.Stack;
 
 public class DemoStack {
